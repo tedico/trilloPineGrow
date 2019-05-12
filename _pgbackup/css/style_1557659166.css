@@ -1,6 +1,10 @@
 /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
 :root {
+<<<<<<< HEAD
+    --color-primary: eb2f64;
+=======
     --color-primary: #eb2f64;
+>>>>>>> layout
     --color-primary-light: #FF3366;
     --color-primary-dark: #BA265D;
     --color-grey-light-1: #faf9f9;
@@ -10,6 +14,14 @@
     --color-grey-dark-1: #333333;
     --color-grey-dark-2: #777777;
     --color-grey-dark-3: #999999;
+<<<<<<< HEAD
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+=======
     --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 }
 
@@ -40,12 +52,15 @@ html {
 *:after {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
+>>>>>>> layout
 }
 
 body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+<<<<<<< HEAD
+=======
     background-image: -webkit-gradient(linear, left top, right bottom, from(var(--color-primary-light)), to(var(--color-primary-dark)));
     background-image: -webkit-linear-gradient(left top, var(--color-primary-light), var(--color-primary-dark));
     background-image: -o-linear-gradient(left top, var(--color-primary-light), var(--color-primary-dark));
@@ -63,6 +78,7 @@ body {
     -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
     font-feature-settings: "kern", "liga", "clig", "calt";
     min-height: 100vh;
+>>>>>>> layout
 }
 
 article,
@@ -282,6 +298,52 @@ textarea {
     font: inherit;
 }
 
+<<<<<<< HEAD
+html {
+    font-size: 62.5%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+* {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+*:before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #eb2f64;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(var(--color-primary-light)), to(var(--color-primary-dark)));
+    background-image: -webkit-linear-gradient(left top, var(--color-primary-light), var(--color-primary-dark));
+    background-image: -o-linear-gradient(left top, var(--color-primary-light), var(--color-primary-dark));
+    background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    background-size: cover;
+    color: rgba(0, 0, 0, 0.8);
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.6;
+    word-wrap: break-word;
+    -webkit-font-kerning: normal;
+    font-kerning: normal;
+    -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+    -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+    font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+=======
+>>>>>>> layout
 img {
     max-width: 100%;
     margin-left: 0;
@@ -735,6 +797,8 @@ pre tt:after {
     html {
         font-size: 100%;
     }
+<<<<<<< HEAD
+=======
 }
 
 .container {
@@ -749,25 +813,6 @@ pre tt:after {
 .header {
     height: 7rem;
     background-color: #fff;
-    border-bottom: var(--color-grey-light-2);
-}
-
-.content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.sidebar {
-    background-color: var(--color-grey-dark-1);
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 18%;
-    flex: 0 0 18%;
-}
-
-.hotel-view {
-    background-color: #fff;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+    border-bottom: var(--color-grey-light-1);
+>>>>>>> layout
 }
