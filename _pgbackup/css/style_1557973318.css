@@ -784,7 +784,7 @@ pre tt:after {
 
 .logo {
     height: 3.25rem;
-    margin-left: 2rem;
+    margin-left: 3rem;
 }
 
 .search {
@@ -869,9 +869,6 @@ pre tt:after {
     -ms-flex-align: center;
     align-items: center;
     cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     height: 100%;
     padding: 0 2rem;
 }
@@ -881,7 +878,9 @@ pre tt:after {
 }
 
 .user-nav__icon-box {
-    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .user-nav__icon {
@@ -891,29 +890,18 @@ pre tt:after {
 }
 
 .user-nav__notification {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     background-color: var(--color-primary);
     border-radius: 50%;
     color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     font-size: .8rem;
     height: 1.75rem;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    position: absolute;
-    top: 1.5rem;
-    right: 1.1rem;
     width: 1.75rem;
 }
 
 .user-nav__user-photo {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     height: 2.75rem;
     border-radius: 50%;
-    margin-bottom: 0;
-    margin-right: 1rem;
 }
