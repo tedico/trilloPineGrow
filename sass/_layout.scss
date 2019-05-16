@@ -8,13 +8,14 @@
 }
 
 .header {
-  height: 7rem;
+  align-items: center;
   background-color: #fff;
   border-bottom: var(--color-grey-light-2);
-
   display: flex;
+  font-size: 1.4rem;
+  height: 7rem;
   justify-content: space-between;
-  align-items: center;
+  
 }
 
 .content {

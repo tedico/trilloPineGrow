@@ -747,9 +747,19 @@ pre tt:after {
 }
 
 .header {
-    height: 7rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     background-color: #fff;
     border-bottom: var(--color-grey-light-2);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.4rem;
+    height: 7rem;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .content {
@@ -770,4 +780,85 @@ pre tt:after {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
+}
+
+.logo {
+    height: 3.25rem;
+    margin-left: 3rem;
+}
+
+.search {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.search__input {
+    background-color: var(--color-grey-light-2);
+    border: none;
+    border-radius: 100px;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    margin-right: -3.5rem;
+    padding: .7rem 2rem;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    width: 90%;
+}
+
+.search__input:focus {
+    background-color: var(--color-grey-light-3);
+    outline: none;
+    width: 100%;
+}
+
+.search__input::-webkit-input-placeholder {
+    font-weight: 100;
+    color: var(--color-grey-dark-4);
+}
+
+.search__input:focus + .search__button {
+    background-color: var(--color-grey-light-3);
+}
+
+.search__button {
+    background-color: var(--color-grey-light-2);
+    border: none;
+}
+
+.search__button:focus {
+    outline: none;
+}
+
+.search__button:active {
+    -webkit-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    transform: translateY(2px);
+}
+
+.search__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark-3);
+}
+
+.user-nav__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+}
+
+.user-nav__user-photo {
+    height: 3.75rem;
+    border-radius: 50%;
 }
