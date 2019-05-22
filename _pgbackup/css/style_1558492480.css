@@ -932,7 +932,6 @@ pre tt:after {
     font-size: 1.4rem;
     list-style: none;
     margin-top: 3.5rem;
-    margin-left: 0;
 }
 
 .side-nav__item::before {
@@ -954,7 +953,7 @@ pre tt:after {
 }
 
 .side-nav__item:hover::before,
-.side-nav__item--active::before {
+.side-nav__item-active::before {
     -webkit-transform: scaleY(1);
     -ms-transform: scaleY(1);
     transform: scaleY(1);
