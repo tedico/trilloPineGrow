@@ -11,6 +11,8 @@
     --color-grey-dark-2: #777777;
     --color-grey-dark-3: #999999;
     --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+    --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+    --line: 1px solid var(--color-grey-light-2);
 }
 
 html {
@@ -751,7 +753,7 @@ pre tt:after {
     -ms-flex-align: center;
     align-items: center;
     background-color: #fff;
-    border-bottom: 1px solid var(--color-grey-light-2);
+    border-bottom: var(--line);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -787,6 +789,33 @@ pre tt:after {
 
 .hotel-view {
     background-color: #fff;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.detail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+}
+
+.description {
+    font-size: 1.4rem;
+    background-color: #fff;
+    -webkit-box-shadow: var(--shadow-light);
+    box-shadow: var(--shadow-light);
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    padding: 3rem;
+}
+
+.user-reviews {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -1010,16 +1039,25 @@ pre tt:after {
     display: flex;
 }
 
+.gallery__item {
+    margin-bottom: 0;
+    display: block;
+}
+
 .gallery__photo {
     width: 100%;
+}
+
+.gallery img {
     display: block;
+    margin-bottom: 0;
 }
 
 .overview {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    border-bottom: 1px solid var(--color-grey-light-2);
+    border-bottom: var(--line);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1038,11 +1076,62 @@ pre tt:after {
     margin-right: auto;
 }
 
-.overview__icon-star,
-.overview__icon-location {
+.overview__icon-star {
     height: 1.75rem;
     fill: var(--color-primary);
     width: 1.75rem;
+}
+
+.overview__location {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.overview__icon-location {
+    height: 1.75rem;
+    fill: var(--color-primary);
+    margin-right: .5rem;
+    width: 1.75rem;
+}
+
+.overview__rating {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    background-color: var(--color-primary);
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-left: 3rem;
+    padding: 0 2.25rem;
+}
+
+.overview__rating-average {
+    font-size: 2.25rem;
+    font-weight: normal;
+    margin-bottom: -5px;
+}
+
+.overview__rating-count {
+    font-size: .8rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto;
 }
 
 .btn-inline {
@@ -1060,13 +1149,13 @@ pre tt:after {
 }
 
 .btn-inline:hover {
-    color: blue;
+    color: var(--color-grey-dark-1);
 }
 
 .btn-inline:focus {
     outline: none;
-    -webkit-animation: pulsate infinite;
-    animation: pulsate infinite;
+    -webkit-animation: pulsate 1s infinite;
+    animation: pulsate 1s infinite;
 }
 
 @-webkit-keyframes pulsate {
@@ -1113,4 +1202,39 @@ pre tt:after {
         -webkit-box-shadow: none;
         box-shadow: none;
     }
+}
+
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+.list {
+    list-style: none;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.list__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    margin-bottom: .7rem;
+}
+
+.list__item::before {
+    content: "";
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    margin-right: .7rem;
+    background-color: var(--color-primary);
+    -webkit-mask-image: url(../img/chevron-thin-right.svg);
+    -webkit-mask-size: cover;
 }

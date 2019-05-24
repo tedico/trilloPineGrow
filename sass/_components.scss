@@ -197,9 +197,18 @@
 .gallery {
   display: flex;
 
+  &__item {
+    margin-bottom: 0;
+    display: block;
+  }
+
   &__photo {
     width: 100%;
+    
+  }
+  img {
     display: block;
+    margin-bottom: 0;
   }
 }
 
@@ -207,7 +216,7 @@
 
 .overview {
   align-items: center;
-  border-bottom: 1px solid var(--color-grey-light-2);
+  border-bottom: var(--line);
   display: flex;
   
   
@@ -227,27 +236,50 @@
     
   }
 
-  &__icon-star, 
-  &__icon-location {
+  &__icon-star {
     height: 1.75rem;
     fill: var(--color-primary);
     width: 1.75rem;
   }
 
   &__location {
-    
+    align-items: center;
+    display: flex;
+    font-size: 1.2rem;
+  }
+
+  &__icon-location {
+    height: 1.75rem;
+    fill: var(--color-primary);
+    margin-right: .5rem;
+    width: 1.75rem;
   }
 
   &__rating {
-
+    align-items: center;
+    align-self: stretch;
+    background-color: var(--color-primary);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 3rem;
+    padding: 0 2.25rem;
+    
   }
 
   &__rating-average {
-
+    font-size: 2.25rem;
+    font-weight: normal;
+    margin-bottom: -5px;
   }
 
   &__rating-count {
-
+    font-size: .8rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto;
+    
   }
 
 }
@@ -265,13 +297,13 @@
   transition: all .2s;
 
   &:hover {
-    // color: var(--color-grey-dark-1);
-    color: blue;
+    color: var(--color-grey-dark-1);
+    
   }
 
   &:focus {
     outline: none;
-    animation: pulsate infinite;
+    animation: pulsate 1s infinite;
   }
 
 }
@@ -292,4 +324,48 @@
     box-shadow: none;
   }
 }
+
+// Paragraph  ==========================================
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+// List ==============================================
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex: 0 0 50%;
+    margin-bottom: .7rem;
+  }
+
+  &__item::before {
+    content: "";
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    margin-right: .7rem;
+    
+    // older browsers
+    // background-image: url(../img/chevron-thin-right.svg);
+    // background-size: cover;
+
+    // newer browsers - masks
+    background-color: var(--color-primary);
+    -webkit-mask-image: url(../img/chevron-thin-right.svg);
+    -webkit-mask-size: cover;
+    mask-image: url(../img/chevron-thin-right.svg);
+    mask-size: cover;
+
+  }
+
+}
+// Recommend =========================================
 
