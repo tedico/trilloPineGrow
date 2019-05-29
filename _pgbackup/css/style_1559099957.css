@@ -738,6 +738,12 @@ pre tt:before,
 pre tt:after {
     content: "";
 }
+/* 
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 100%;
+    }
+} */
 
 .container {
     max-width: 120rem;
@@ -1405,18 +1411,11 @@ pre tt:after {
     height: 1rem;
     width: 1rem;
     margin-right: .7rem;
-    background-image: url(../img/chevron-thin-right.svg);
-    background-size: cover;
-}
-
-@supports ((-webkit-mask-image: url()) or (mask-image: url())) {
-    .list__item::before {
-        background-color: var(--color-primary);
-        -webkit-mask-image: url(../img/chevron-thin-right.svg);
-        -webkit-mask-size: cover;
-        mask-image: url(../img/chevron-thin-right.svg);
-        mask-size: cover;
-    }
+    background-color: var(--color-primary);
+    -webkit-mask-image: url(../img/chevron-thin-right.svg);
+    -webkit-mask-size: cover;
+    mask-image: url(../img/chevron-thin-right.svg);
+    mask-size: cover;
 }
 
 .recommend {
